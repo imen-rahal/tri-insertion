@@ -1,0 +1,16 @@
+ALGORITHM tri-insertion 
+VAR
+  t : array-of integer [10];
+  i,j,case : INTEGER;
+BEGIN
+  FOR i FROM 0 TO t.length-1 STEP 1  DO
+    case := t[i];
+    j :=i-1;
+    WHILE ((j>=0) and (t[j]>case)) DO
+      t[j+1] := t[j];
+      j := j-1;
+    END_WHILE
+    t [j+1] = case;
+  END_FOR
+END
+
